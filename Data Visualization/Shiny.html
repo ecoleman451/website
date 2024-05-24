@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Edward Coleman" />
+
+
+<title>Shiny Application</title>
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="section-header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Shiny Application</h1>
+<h4 class="author">Edward Coleman</h4>
+<h4 class="date">West Chester University</h4>
+
+</div>
+
+<div id="section-TOC">
+<ul>
+<li><a href="#section-case-study-i---density-of-normal-distribution"
+id="section-toc-case-study-i---density-of-normal-distribution"><span
+class="toc-section-number">1</span> Case Study I - Density of Normal
+Distribution</a></li>
+</ul>
+</div>
+
+<style type="text/css">
+div#TOC li {
+    list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0;
+}
+
+h1.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: DarkRed;
+  text-align: center;
+}
+h4.author { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkRed;
+  text-align: center;
+}
+h4.date { /* Header 4 - and the author and data headers use this too  */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+h1 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    color: darkred;
+    text-align: center;
+}
+h2 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+h3 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+h4 { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: darkred;
+    text-align: left;
+}
+</style>
+<div id="section-case-study-i---density-of-normal-distribution"
+class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Case Study I - Density
+of Normal Distribution</h1>
+<p>We revise the previous example and redesign the layout by including a
+title, a sidebar, and main panels. We place three input widgets
+requesting sample size, the population mean and standard deviation. The
+output histogram will be placed in the main panel. The following is the
+detailed code</p>
+<pre class="r"><code>library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+
+    # Application title
+    titlePanel(&quot;Amount Of test taken&quot;),
+
+    # Sidebar with a slider input for number of bins 
+    sidebarLayout(
+        sidebarPanel(sliderInput(&quot;bins&quot;, &quot;Number of Tests:&quot;, min = 1,max = 100,value = 30),
+                     sliderInput(&quot;A&quot;, &quot;P( Having the condition ):&quot;, min = 0, max = 1,value = 0.2, step = 0.01),
+                     sliderInput(&quot;sens&quot;, &quot;Sensitivity: P( + | Having the condition )&quot;, min = 0, max = 1,value = 0.7, step = 0.01),
+                     sliderInput(&quot;spec&quot;, &quot;Specificity: P( - | Not having the condition )&quot;, min = 0, max = 1, value = 0.9, step = 0.01)
+            
+        ),
+        
+        
+        # Show a plot of the generated distribution
+        mainPanel(
+           plotOutput(&quot;distPlot&quot;)
+        )
+    )
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+
+    output$distPlot &lt;- renderPlot({
+        # generate bins based on input$bins from ui.R
+        #x &lt;- faithful[, 2]
+        n &lt;- input$bins
+        x&lt;-0:n
+        y&lt;-n-x
+        x1&lt;-dbinom(0:n,n,input$sens)
+        x2&lt;-dbinom(0:n,n,(1-input$spec))
+        lim&lt;-max(c(x1,x2))
+        p &lt;- ((input$sens)^x)*((1-input$sens)^y)*(input$A) / (((input$sens)^x)*((1-input$sens)^y)*(input$A) + (((1-input$spec))^x)*(((input$spec))^y)*(1-input$A))
+        n1&lt;-sum(p&gt;1/2)
+        colors&lt;-c(rep(&quot;green&quot;,n-n1+1), rep(&quot;red&quot;,n1))
+        
+        plot(x,p,type=&quot;b&quot;, xlab=&quot;Number of Positive Results (k)&quot;, main=&quot;Likelihood of Having Covid-19 relative to Number of Tests Taken&quot;, ylab=&quot;Scaled Probabilities&quot;, col=&quot;grey&quot;)
+        
+        lines(x,p,type=&quot;p&quot;, col=colors)
+        
+        barplot(x1/max(x1), col=&quot;red&quot;, add=TRUE)
+        barplot( x2/max(x2), col=&quot;green&quot;, add=TRUE)
+        
+        
+        # draw the histogram with the specified number of bins
+        #hist(x, breaks = bins, col = &#39;darkgray&#39;, border = &#39;white&#39;)
+    })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)</code></pre>
+<iframe data-deferred-src="app2312137ec87c47a79e8612a59a45bafa/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+</div>
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlNoaW55IEFwcGxpY2F0aW9uIg0KYXV0aG9yOiAiRWR3YXJkIENvbGVtYW4iDQpkYXRlOiAiV2VzdCBDaGVzdGVyIFVuaXZlcnNpdHkiDQpvdXRwdXQ6DQogICBodG1sX2RvY3VtZW50OiANCiAgICB0b2M6IHllcw0KICAgIHRvY19kZXB0aDogNA0KICAgIHRvY19mbG9hdDogbm8NCiAgICBjb2RlX2ZvbGRpbmc6IGhpZGUNCiAgICBjb2RlX2Rvd25sb2FkOiB5ZXMNCiAgICBzbW9vdGhfc2Nyb2xsOiB5ZXMNCiAgICBudW1iZXJfc2VjdGlvbnM6IHllcw0KICAgIHRoZW1lOiByZWFkYWJsZQ0KcnVudGltZTogc2hpbnkNCi0tLQ0KDQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KZGl2I1RPQyBsaSB7DQogICAgbGlzdC1zdHlsZTpub25lOw0KICAgIGJhY2tncm91bmQtaW1hZ2U6bm9uZTsNCiAgICBiYWNrZ3JvdW5kLXJlcGVhdDpub25lOw0KICAgIGJhY2tncm91bmQtcG9zaXRpb246MDsNCn0NCg0KaDEudGl0bGUgew0KICBmb250LXNpemU6IDI0cHg7DQogIGZvbnQtd2VpZ2h0OiBib2xkOw0KICBjb2xvcjogRGFya1JlZDsNCiAgdGV4dC1hbGlnbjogY2VudGVyOw0KfQ0KaDQuYXV0aG9yIHsgLyogSGVhZGVyIDQgLSBhbmQgdGhlIGF1dGhvciBhbmQgZGF0YSBoZWFkZXJzIHVzZSB0aGlzIHRvbyAgKi8NCiAgICBmb250LXNpemU6IDE4cHg7DQogIGZvbnQtZmFtaWx5OiAiVGltZXMgTmV3IFJvbWFuIiwgVGltZXMsIHNlcmlmOw0KICBjb2xvcjogRGFya1JlZDsNCiAgdGV4dC1hbGlnbjogY2VudGVyOw0KfQ0KaDQuZGF0ZSB7IC8qIEhlYWRlciA0IC0gYW5kIHRoZSBhdXRob3IgYW5kIGRhdGEgaGVhZGVycyB1c2UgdGhpcyB0b28gICovDQogIGZvbnQtc2l6ZTogMThweDsNCiAgZm9udC1mYW1pbHk6ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgc2VyaWY7DQogIGNvbG9yOiBEYXJrQmx1ZTsNCiAgdGV4dC1hbGlnbjogY2VudGVyOw0KfQ0KaDEgeyAvKiBIZWFkZXIgMyAtIGFuZCB0aGUgYXV0aG9yIGFuZCBkYXRhIGhlYWRlcnMgdXNlIHRoaXMgdG9vICAqLw0KICAgIGZvbnQtc2l6ZTogMjJweDsNCiAgICBmb250LWZhbWlseTogIlRpbWVzIE5ldyBSb21hbiIsIFRpbWVzLCBzZXJpZjsNCiAgICBjb2xvcjogZGFya3JlZDsNCiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7DQp9DQpoMiB7IC8qIEhlYWRlciAzIC0gYW5kIHRoZSBhdXRob3IgYW5kIGRhdGEgaGVhZGVycyB1c2UgdGhpcyB0b28gICovDQogICAgZm9udC1zaXplOiAxOHB4Ow0KICAgIGZvbnQtZmFtaWx5OiAiVGltZXMgTmV3IFJvbWFuIiwgVGltZXMsIHNlcmlmOw0KICAgIGNvbG9yOiBuYXZ5Ow0KICAgIHRleHQtYWxpZ246IGxlZnQ7DQp9DQoNCmgzIHsgLyogSGVhZGVyIDMgLSBhbmQgdGhlIGF1dGhvciBhbmQgZGF0YSBoZWFkZXJzIHVzZSB0aGlzIHRvbyAgKi8NCiAgICBmb250LXNpemU6IDE1cHg7DQogICAgZm9udC1mYW1pbHk6ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgc2VyaWY7DQogICAgY29sb3I6IG5hdnk7DQogICAgdGV4dC1hbGlnbjogbGVmdDsNCn0NCg0KaDQgeyAvKiBIZWFkZXIgNCAtIGFuZCB0aGUgYXV0aG9yIGFuZCBkYXRhIGhlYWRlcnMgdXNlIHRoaXMgdG9vICAqLw0KICAgIGZvbnQtc2l6ZTogMThweDsNCiAgICBmb250LWZhbWlseTogIlRpbWVzIE5ldyBSb21hbiIsIFRpbWVzLCBzZXJpZjsNCiAgICBjb2xvcjogZGFya3JlZDsNCiAgICB0ZXh0LWFsaWduOiBsZWZ0Ow0KfQ0KPC9zdHlsZT4NCg0KYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9DQppZiAoIXJlcXVpcmUoImtuaXRyIikpIHsNCiAgIGluc3RhbGwucGFja2FnZXMoImtuaXRyIikNCiAgIGxpYnJhcnkoa25pdHIpDQp9DQppZiAoIXJlcXVpcmUoInNoaW55IikpIHsNCiAgIGluc3RhbGwucGFja2FnZXMoInNoaW55IikNCiAgIGxpYnJhcnkoc2hpbnkpDQp9DQppZiAoIXJlcXVpcmUoImdncGxvdDIiKSkgew0KICAgaW5zdGFsbC5wYWNrYWdlcygiZ2dwbG90MiIpDQogICBsaWJyYXJ5KGdncGxvdDIpDQp9DQppZiAoIXJlcXVpcmUoInRpZHl2ZXJzZSIpKSB7DQogICBpbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQ0KICAgbGlicmFyeSh0aWR5dmVyc2UpDQp9DQppZiAoIXJlcXVpcmUoImRwbHlyIikpIHsNCiAgIGluc3RhbGwucGFja2FnZXMoImRwbHlyIikNCiAgIGxpYnJhcnkoZHBseXIpDQp9DQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgIHdhcm5pbmcgPSBGQUxTRSwgICANCiAgICAgICAgICAgICAgICAgICAgICByZXN1bHQgPSBUUlVFLCAgIA0KICAgICAgICAgICAgICAgICAgICAgIG1lc3NhZ2UgPSBGQUxTRSwNCiAgICAgICAgICAgICAgICAgICAgICBmaWcuYWxpZ249J2NlbnRlcicsIA0KICAgICAgICAgICAgICAgICAgICAgIGZpZy5wb3MgPSAnaHQnKQ0KIyMjIFRoZSBmb2xsb3dpbmcgZnVuY3Rpb25zIGVuYWJsZQ0KIyMjIHNoaW55IGFwcHMgdG8gZGlzcGxheSBpbnNpZGUgUk1hcmtkb3duIGRvY3VtZW50Lg0KIyMjIHlvdSBkb24ndCBuZWVkIHRvIHVuZGVyc3RhbmQgdGhlc2UgZnVuY3Rpb25zLg0KYGBgDQoNCg0KDQojIENhc2UgU3R1ZHkgSSAgLSBEZW5zaXR5IG9mIE5vcm1hbCBEaXN0cmlidXRpb24NCldlIHJldmlzZSB0aGUgcHJldmlvdXMgZXhhbXBsZSBhbmQgcmVkZXNpZ24gdGhlIGxheW91dCBieSBpbmNsdWRpbmcgYSB0aXRsZSwgYSBzaWRlYmFyLCBhbmQgbWFpbiBwYW5lbHMuIFdlIHBsYWNlIHRocmVlIGlucHV0IHdpZGdldHMgcmVxdWVzdGluZyBzYW1wbGUgc2l6ZSwgdGhlIHBvcHVsYXRpb24gbWVhbiBhbmQgc3RhbmRhcmQgZGV2aWF0aW9uLiBUaGUgb3V0cHV0IGhpc3RvZ3JhbSB3aWxsIGJlIHBsYWNlZCBpbiB0aGUgbWFpbiBwYW5lbC4gVGhlIGZvbGxvd2luZyBpcyB0aGUgZGV0YWlsZWQgY29kZQ0KDQpgYGB7cn0NCmxpYnJhcnkoc2hpbnkpDQoNCiMgRGVmaW5lIFVJIGZvciBhcHBsaWNhdGlvbiB0aGF0IGRyYXdzIGEgaGlzdG9ncmFtDQp1aSA8LSBmbHVpZFBhZ2UoDQoNCiAgICAjIEFwcGxpY2F0aW9uIHRpdGxlDQogICAgdGl0bGVQYW5lbCgiQW1vdW50IE9mIHRlc3QgdGFrZW4iKSwNCg0KICAgICMgU2lkZWJhciB3aXRoIGEgc2xpZGVyIGlucHV0IGZvciBudW1iZXIgb2YgYmlucyANCiAgICBzaWRlYmFyTGF5b3V0KA0KICAgICAgICBzaWRlYmFyUGFuZWwoc2xpZGVySW5wdXQoImJpbnMiLCAiTnVtYmVyIG9mIFRlc3RzOiIsIG1pbiA9IDEsbWF4ID0gMTAwLHZhbHVlID0gMzApLA0KICAgICAgICAgICAgICAgICAgICAgc2xpZGVySW5wdXQoIkEiLCAiUCggSGF2aW5nIHRoZSBjb25kaXRpb24gKToiLCBtaW4gPSAwLCBtYXggPSAxLHZhbHVlID0gMC4yLCBzdGVwID0gMC4wMSksDQogICAgICAgICAgICAgICAgICAgICBzbGlkZXJJbnB1dCgic2VucyIsICJTZW5zaXRpdml0eTogUCggKyB8IEhhdmluZyB0aGUgY29uZGl0aW9uICkiLCBtaW4gPSAwLCBtYXggPSAxLHZhbHVlID0gMC43LCBzdGVwID0gMC4wMSksDQogICAgICAgICAgICAgICAgICAgICBzbGlkZXJJbnB1dCgic3BlYyIsICJTcGVjaWZpY2l0eTogUCggLSB8IE5vdCBoYXZpbmcgdGhlIGNvbmRpdGlvbiApIiwgbWluID0gMCwgbWF4ID0gMSwgdmFsdWUgPSAwLjksIHN0ZXAgPSAwLjAxKQ0KICAgICAgICAgICAgDQogICAgICAgICksDQogICAgICAgIA0KICAgICAgICANCiAgICAgICAgIyBTaG93IGEgcGxvdCBvZiB0aGUgZ2VuZXJhdGVkIGRpc3RyaWJ1dGlvbg0KICAgICAgICBtYWluUGFuZWwoDQogICAgICAgICAgIHBsb3RPdXRwdXQoImRpc3RQbG90IikNCiAgICAgICAgKQ0KICAgICkNCikNCg0KIyBEZWZpbmUgc2VydmVyIGxvZ2ljIHJlcXVpcmVkIHRvIGRyYXcgYSBoaXN0b2dyYW0NCnNlcnZlciA8LSBmdW5jdGlvbihpbnB1dCwgb3V0cHV0KSB7DQoNCiAgICBvdXRwdXQkZGlzdFBsb3QgPC0gcmVuZGVyUGxvdCh7DQogICAgICAgICMgZ2VuZXJhdGUgYmlucyBiYXNlZCBvbiBpbnB1dCRiaW5zIGZyb20gdWkuUg0KICAgICAgICAjeCA8LSBmYWl0aGZ1bFssIDJdDQogICAgICAgIG4gPC0gaW5wdXQkYmlucw0KICAgICAgICB4PC0wOm4NCiAgICAgICAgeTwtbi14DQogICAgICAgIHgxPC1kYmlub20oMDpuLG4saW5wdXQkc2VucykNCiAgICAgICAgeDI8LWRiaW5vbSgwOm4sbiwoMS1pbnB1dCRzcGVjKSkNCiAgICAgICAgbGltPC1tYXgoYyh4MSx4MikpDQogICAgICAgIHAgPC0gKChpbnB1dCRzZW5zKV54KSooKDEtaW5wdXQkc2VucyleeSkqKGlucHV0JEEpIC8gKCgoaW5wdXQkc2VucyleeCkqKCgxLWlucHV0JHNlbnMpXnkpKihpbnB1dCRBKSArICgoKDEtaW5wdXQkc3BlYykpXngpKigoKGlucHV0JHNwZWMpKV55KSooMS1pbnB1dCRBKSkNCiAgICAgICAgbjE8LXN1bShwPjEvMikNCiAgICAgICAgY29sb3JzPC1jKHJlcCgiZ3JlZW4iLG4tbjErMSksIHJlcCgicmVkIixuMSkpDQogICAgICAgIA0KICAgICAgICBwbG90KHgscCx0eXBlPSJiIiwgeGxhYj0iTnVtYmVyIG9mIFBvc2l0aXZlIFJlc3VsdHMgKGspIiwgbWFpbj0iTGlrZWxpaG9vZCBvZiBIYXZpbmcgQ292aWQtMTkgcmVsYXRpdmUgdG8gTnVtYmVyIG9mIFRlc3RzIFRha2VuIiwgeWxhYj0iU2NhbGVkIFByb2JhYmlsaXRpZXMiLCBjb2w9ImdyZXkiKQ0KICAgICAgICANCiAgICAgICAgbGluZXMoeCxwLHR5cGU9InAiLCBjb2w9Y29sb3JzKQ0KICAgICAgICANCiAgICAgICAgYmFycGxvdCh4MS9tYXgoeDEpLCBjb2w9InJlZCIsIGFkZD1UUlVFKQ0KICAgICAgICBiYXJwbG90KCB4Mi9tYXgoeDIpLCBjb2w9ImdyZWVuIiwgYWRkPVRSVUUpDQogICAgICAgIA0KICAgICAgICANCiAgICAgICAgIyBkcmF3IHRoZSBoaXN0b2dyYW0gd2l0aCB0aGUgc3BlY2lmaWVkIG51bWJlciBvZiBiaW5zDQogICAgICAgICNoaXN0KHgsIGJyZWFrcyA9IGJpbnMsIGNvbCA9ICdkYXJrZ3JheScsIGJvcmRlciA9ICd3aGl0ZScpDQogICAgfSkNCn0NCg0KIyBSdW4gdGhlIGFwcGxpY2F0aW9uIA0Kc2hpbnlBcHAodWkgPSB1aSwgc2VydmVyID0gc2VydmVyKQ0KYGBgDQoNCg==</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("section-TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("Shiny.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
