@@ -1,259 +1,174 @@
-
 <!DOCTYPE html>
-<html>                                    <!-- open html tag: required  -->
+<html lang="en">
 
-  <head>                                  <!-- open page header: required -->
-    <title>Edward Coleman</title>      <!-- page title appears on the tab -->
-    
-    <style>   <!-- css style file -->
-        
-      body{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Coleman</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
             font-family: Verdana, sans-serif;
             font-size: 11px;
-          }
-        
-      p0{
-         font-family: Verdana, sans-serif;
-         color: black;
-         font-size: 11px;
-         padding-top:0px;
-      }
-      
-      p{
-         font-family: Verdana, sans-serif;
-         color: black;
-         font-size: 11px;
-         padding-top:10px;
-      }
-      
-    	 h1, h2, h3, h4, h5, btn {
-		         font-family: Verdana, sans-serif; 
-             /*font-weight: bold;*/
-             font-variant: small-caps;	
-           }
-     link-btn {
-        background-color: transparent;
-        color: blue;
-        border: 1px solid DodgerBlue;
-        padding: 0px 5px 0px 5px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        height: 14px;
-        font-size: 8px;
-        font-weight: normal;
-        margin: 0px 1px 0px 1px;
-        cursor: pointer;
-      }
-          
+            background-image: url('img/Ocean.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white; /* Default text color */
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 130px;
+            border-radius: 50%;
+        }
+
+        .text-highlight {
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .link-btn {
+            background-color: transparent;
+            color: blue;
+            border: 1px solid DodgerBlue;
+            padding: 0 5px;
+            text-align: center;
+            display: inline-block;
+            height: 14px;
+            font-size: 8px;
+            font-weight: normal;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-variant: small-caps;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .content-box {
+            padding: 20px;
+        }
+
+        .content-box h4 {
+            font-size: 18px;
+            color: white;
+        }
+
+        .content-box p, .content-box ul {
+            font-size: 14px;
+            color: white;
+        }
+
+        .content-box ul {
+            padding-left: 20px;
+        }
+
+        .content-box li {
+            margin-bottom: 10px;
+        }
+
+        .content-box a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+        hr {
+            border-top: 1px solid lightblue;
+        }
     </style>
-    
-  </head>     <!-- close page header: required -->
-  
-  <!-- All contents of the web page MUST be placed between <body> </body> -->
-  
-  <body style="background-image: url('img/Water.jpg')">   <!-- open html body: required -->
-  <BR><BR>
-  
-   <table align = "center"  border = "0"  width=85%  bordercolor="gold"  bgcolor = "white">        
-     <tbody>
-     
-      <tr>
-      <!--create a margin to the left side of the table-->
-      <!--TD  style="background-image: url('img/TableBg.jpg'); width:2%;"></TD--> 
-      <!--TD bgcolor='#003366'--> 
-      <TD style="background-image: url('img/OIP.jpg')" style="width:30%">
-        <table border = "0" bordercolor="darkgreen" align = "center"
-        width="100%" height = "100%" style = "border-spacing: 0"> 
-           <tr>
-            <TD style = "line-height: 20%;">
-                <BR><BR><BR><BR><BR><BR><BR><BR>
-                <center><img src="img/Me.jpg" width=120 height=130>
-                <h3  style="padding-bottom: 0px;"><font color = "white"><br>&nbsp; Edward Coleman</font></h3>
-                <p0><font color = "lightgray">&nbsp; Student, Statistician <br><br><br><br>and Data Scientist</font></p0>
-                <BR><BR><BR><BR><BR>
-                <p0><a href="Coleman_CV.docx" style="text-decoration: none;"><font color = "gold">&nbsp;|One-page CV|</font>
-                </a></center></p0> 
-                <BR><BR><BR>
-                <hr color = "gray">
-            </TD>
-           </tr>
-         
-           <tr>
-            <TD style = "line-height: 30%;">
-                <h5><font color = "white">&nbsp; Contact</font></h5>
-                <p0><font color = "lightgray">
-                    &nbsp; West Chester University<br><br><br>
-                    &nbsp; West Chester, PA 19383<br><br><br>
-                    &nbsp; Email: EC926596@wcupa.edu <br><br><br><br>
-                    <!--/font></p0>
-                    <!--hr color="gray">
-                    <p0><font color = "lightgray"-->
-                    &nbsp; <a href="https://www.linkedin.com/in/eddie-coleman-83b474221/" style="text-decoration: none;"  target="_blank"  
-                     onclick="window.open('https://www.linkedin.com/in/eddie-coleman-83b474221/','name','width=700, height=500')">
-                     <font color = "lightgray">https://www.linkedin.com/in/eddie-coleman/</font></a><br><br><br><br>
-                     &nbsp; <a href="https://public.tableau.com/app/profile/edward.coleman3064/vizzes" style="text-decoration: none;"  target="_blank"  
-                     onclick="window.open('https://public.tableau.com/app/profile/edward.coleman3064/vizzes','name','width=700, height=500')">
-                     <font color = "lightgray">https://public.tableau.com/ed-coleman/</font></a>
-                     
-                     <br><br><br><br>
-                      &nbsp; <a href="https://www.shinyapps.io/admin/#/dashboard" style="text-decoration: none;"  target="_blank"  
-                     onclick="window.open('https://www.shinyapps.io/admin/#/dashboard','name','width=700, height=500')">
-                     <font color = "lightgray">https://shinyapps.io/ecoleman/</font></a>
-                     
-                    </font></p0>
-                    <hr color="gray">
-            </TD>
-          </tr>
-         
-         <tr>
-            <TD>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </TD>
-         </tr>
-         
-         </table>
-        </TD>
-      
-         <!--create a margin to the contact and the major content columns of the major table-->
-         <TD style="width:2%"></TD>
-      
-         <TD style="width:64%">
-        <table>
-          <tr>
-           <TD  style = "line-height: 110%;">
-           <br>
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">About Me</font></h4>
-               <!--font color = 'black' face="WildWest" size="4"-->
-                  <font color="red">
-                  <p><li>R (Statistical Software Program): Basic Code, Data Visualization, Basic Modeling & Sampling, etc.</li>
-                  <li>SAS & SAS Viya (Statistical Software Program): Basic Code, Data Visualization, Modeling,  etc.</li>
-                  <li>Microsoft Excel: Power Query, PivotTables, Data Mining, etc.</li></p>
-               <hr color="lightblue"> </font>
-            </TD>
-             
-         </tr>
+</head>
 
-        <tr>
-           <TD style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Resources</font></h4>
-               <font color = 'black' face="WildWest" size="4">
-               <font color="#800080">
-                  <b> <p> West Chester University of Pennsylvania</b></p>
-                  <li>Master of Science in Applied Statistics (anticipated December 2024) </li>
-                  <li>Bachelor of Science in Applied Statistics (May 2023) </li>               </font>
-               <hr color="lightblue"> </font>
-            </TD>
-        </tr>
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3 text-center py-5" style="background-image: url('img/OIP.jpg'); background-size: cover;">
+                <img src="img/Me.jpg" alt="Edward Coleman" class="profile-pic mb-3">
+                <h3 class="text-highlight">Edward Coleman</h3>
+                <p class="text-highlight">Student, Statistician and Data Scientist</p>
+                <a href="Coleman_CV.docx" class="btn btn-warning mb-3">One-page CV</a>
+                <hr class="bg-gray">
+                <h5 class="text-highlight">Contact</h5>
+                <p class="contact-info">
+                    West Chester University<br>
+                    West Chester, PA 19383<br>
+                    Email: <a href="mailto:EC926596@wcupa.edu">EC926596@wcupa.edu</a><br>
+                    <a href="https://www.linkedin.com/in/eddie-coleman-83b474221/" target="_blank">LinkedIn</a><br>
+                    <a href="https://public.tableau.com/app/profile/edward.coleman3064/vizzes" target="_blank">Tableau</a><br>
+                    <a href="https://www.shinyapps.io/admin/#/dashboard" target="_blank">Shiny Apps</a>
+                </p>
+                <hr class="bg-gray">
+            </div>
+            <div class="col-md-9">
+                <div class="content-box">
+                    <h4>About Me</h4>
+                    <p>R (Statistical Software Program): Basic Code, Data Visualization, Basic Modeling & Sampling, etc.</p>
+                    <p>SAS & SAS Viya (Statistical Software Program): Basic Code, Data Visualization, Modeling, etc.</p>
+                    <p>Microsoft Excel: Power Query, PivotTables, Data Mining, etc.</p>
+                    <hr>
+                    
+                    <h4>Resources</h4>
+                    <p>West Chester University of Pennsylvania</p>
+                    <ul>
+                        <li>Master of Science in Applied Statistics (anticipated December 2024)</li>
+                        <li>Bachelor of Science in Applied Statistics (May 2023)</li>
+                    </ul>
+                    <hr>
+                    
+                    <h4>Research Experience</h4>
+                    <p>Penske Truck Leasing, PA; Intern, May 2023 - August 2023</p>
+                    <ul>
+                        <li>Calculated anticipated demand for rental trucks by county in the U.S. by correlating school enrollment with past rental truck demand provided by Penske</li>
+                        <li>Gained more in-depth knowledge of Microsoft Excel, data mining, and statistical modeling methods using SAS Viya</li>
+                        <li>Collaborated with 2 other interns on this project throughout the summer</li>
+                    </ul>
+                    <p>Ursinus College REU, Collegeville, PA (Research Experience for Undergraduates) - Funded by the NSF (Researcher) <i>Topic: Pandemic Response and Overall Health, May 2022 - July 2022 PI: Hugo Montesinos, Ph.D.</i></p>
+                    <ul>
+                        <li>Conducted a literature review of research papers using Google Scholar and recommendations from the PI</li>
+                        <li>Extracted relevant data, entered data in R, and analyzed the influx of mass shootings due to the effect of mental health caused by the COVID-19 pandemic</li>
+                        <li>Worked with a team of two to three students from other universities</li>
+                    </ul>
+                    <hr>
+                    
+                    <h4>Publications/Presentations</h4>
+                    <ul>
+                        <li>Coleman, E., Kircher, S., Innocent, J., Trauger, M., and Montesinos, H. <i>A Pandemic of Mental Health.</i> Paper Presented at: Ursinus College Summer Fellows Research Symposium; July 2022; Collegeville, PA. 
+                            <a href="A_Pandemic_of_Mental_Health.docx" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Coleman, E., Kircher, S., Innocent, J., Trauger, M., and Montesinos, H. <i>A Pandemic of Mental Health.</i> Poster Presented at: MathFest; August 2022; Philadelphia, PA</li>
+                        <li>Shiny Presentation (Ursinus)
+                            <a href="https://ecoleman451.shinyapps.io/Shiny_Ursinus/" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Presidential Polls Presentation (Modern Experimental Design)
+                            <a href="Presidential_Polls.pptx" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Modern Experimental Design (Final Presentation)
+                            <a href="512Presentation2.pptx" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Intermediate Linear Models (Final Presentation)
+                            <a href="Final Project HAM27.pptx" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Week Two Presentation
+                            <a href="w2/Presentation.html" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Week Three (Scatterplot)
+                            <a href="w3/Penguins.html" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                        <li>Week Four (Better Scatterplot)
+                            <a href="w4/Penguins-2.html" class="link-btn" target="_blank">WEB LINK</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-        <tr>
-           <TD style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Research Experience</font></h4>
-               <font color = 'black' face="WildWest" size="4">
-                  <b><p> Penske Truck Leasing, PA; Intern, May 2023 - August 2023 </p> </b>
-                  <li> Calculated anticipated demand for rental trucks by county in the U.S. by correlating scool enrollment with past rental truck demand provided by Penske </li>
-                  <li>Gained more in depth knowledge of Microsoft Excel, data mining, and statistical modeling methods using SAS Viya </li>
-                  <li>Collaborated with 2 other interns on this project throughout the summer</li>
-                  <b><p> Ursinus College REU, Collegeville, PA (Research Experience for Undergraduates) - Funded by the NSF (Researcher) <i> Topic: Pandemic Response and Overall Health, May 2022 - July 2022 PI: Hugo Montesinos, Ph.D. </i> </p> </b>
-                  <li>Conducted a literature review of research papers using Google Scholar and recommendations from the PI </li>
-                  <li>Extracted relevant data, entered data in R, and analyzed the influx of mass shootings due to the effect of mental health caused by the COVID-19 pandemic </li>
-                  <li>Worked with a team of two to three students from other universities </li>
-               </font>
-               <hr color="lightblue">
-            </TD>
-        </tr>
-        
-        <tr>
-           <TD style = "line-height: 110%;">
-              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Publications/Presenations</font></h4>
-               <!--font color = "blue" size="4"-->
-  <ul>
-      <li>Coleman, E., Kircher, S., Innocent, J., Trauger, M., and Montesinos, H. <i>A Pandemic of Mental Health.</i> Paper Presented at: Ursinus College Summer Fellows Research Symposium; July 2022; Collegeville, PA. 
-                      <a href="A_Pandemic_of_Mental_Health.docx"  target="_blank"  
-                     onclick="window.open('A_Pandemic_of_Mental_Health.docx','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Coleman, E., Kircher, S., Innocent, J., Trauger, M., and Montesinos, H. <i>A Pandemic of Mental Health.</i> Poster Presented at: MathFest; August 2022; Philadelphia, PA </li>
-    <li>Shiny Presentation (Ursinus)
-                      <a href="https://ecoleman451.shinyapps.io/Shiny_Ursinus/"  target="_blank"  
-                     onclick="window.open('https://ecoleman451.shinyapps.io/Shiny_Ursinus/','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Presidential Polls Presentation (Modern Experimental Design)
-                      <a href="Presidential_Polls.pptx"  target="_blank"  
-                     onclick="window.open('Presidential_Polls.pptx','name','width=700, height=500')">
-                    <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Modern Experimental Design (Final Presentation)
-                      <a href="512Presentation2.pptx"  target="_blank"  
-                     onclick="window.open('512Presentation2.pptx','name','width=700, height=500')">
-                        <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Intermediate Linear Models (Final Presentation)
-                      <a href="Final Project HAM27.pptx"  target="_blank"  
-                     onclick="window.open('Final Project HAM27.pptx','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Week Two Presentation
-                      <a href="w2/Presentation.html"  target="_blank"  
-                     onclick="window.open('w2/Presentation.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Week Three (Scatterplot)
-                      <a href="w3/Penguins.html"  target="_blank"  
-                     onclick="window.open('w3/Penguins.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Week Four (Better Scatterplot)
-                      <a href="w4/Penguins-2.html"  target="_blank"  
-                     onclick="window.open('w4/Penguins-2.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Week Five (Using GGPlot)
-                      <a href="w5/GGPlot.html"  target="_blank"  
-                     onclick="window.open('w5/GGPlot.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-    <li>Week Six (Using Plotly)
-                      <a href="w6/Plotly.html"  target="_blank"  
-                     onclick="window.open('w6/Plotly.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li> 
-        <li>Week Seven (Mapping)
-                      <a href="w7/Mapping.html"  target="_blank"  
-                     onclick="window.open('w7/Mapping.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-        <li>Week Eight (More Mapping)
-                      <a href="Data Visualization/More_Mapping.html"  target="_blank"  
-                     onclick="window.open('Data Visualization/More_Mapping.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-        <li>Week Nine (Tableau)
-                      <a href="Data Visualization/Tableau.html"  target="_blank"  
-                     onclick="window.open('Data Visualization/Tableau.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-        <li>Week Ten (Tableau Dashboard)
-                      <a href="Data Visualization/TableauDash.html"  target="_blank"  
-                     onclick="window.open('Data Visualization /TableauDash.html','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-        <li>Week Eleven (Shiny)
-                      <a href=" https://ecoleman451.shinyapps.io/Shiny_Example/"  target="_blank"  
-                     onclick="window.open(' https://ecoleman451.shinyapps.io/Shiny_Example/','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-        <li>Week Twelve (More Shiny)
-                      <a href=" https://ecoleman451.shinyapps.io/ShinyPenguins/#"  target="_blank"  
-                     onclick="window.open(' https://ecoleman451.shinyapps.io/ShinyPenguins/#','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-        <li>Week Thirteen (Shiny FlexDashboard)
-                      <a href=" https://ecoleman451.shinyapps.io/FlexDashboard/#"  target="_blank"  
-                     onclick="window.open(' https://ecoleman451.shinyapps.io/FlexDashboard/#','name','width=700, height=500')">
-                     <link-btn> WEB LINK</link-btn></a> <br></li>
-  </ul>
-                    <p><font color = "blue">
-                    </font></p>
-               <!--/font-->
-               <hr color="lightblue">
-            </TD>
-        </tr>        
-        <tr>
-        </tr>
-        
-        </table>
-       </TD>
-       <!--create a margin to the right side of the table-->
-       <TD style="width:2%"></TD>
-     </tr>
-     </tbody>
-    </table>
-  </body>                                 <!-- close html body: required -->
-</html> 
+</html>
