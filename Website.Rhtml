@@ -22,32 +22,24 @@
             border-radius: 50%;
         }
 
-        .text-highlight {
-            color: white !important;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .contact-info a {
-            color: white;
+        .contact-info a,
+        .content-box a {
+            color: lightblue;
             text-decoration: none;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .link-btn {
-            background-color: transparent;
-            color: blue;
-            border: 1px solid DodgerBlue;
-            padding: 0 5px;
-            text-align: center;
-            display: inline-block;
-            height: 14px;
-            font-size: 8px;
-            font-weight: normal;
-            margin: 0 1px;
-            cursor: pointer;
+        .contact-info a:hover,
+        .content-box a:hover {
+            color: #ffc107;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-variant: small-caps;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -62,7 +54,8 @@
             color: white;
         }
 
-        .content-box p, .content-box ul {
+        .content-box p,
+        .content-box ul {
             font-size: 14px;
             color: white;
         }
@@ -75,11 +68,6 @@
             margin-bottom: 10px;
         }
 
-        .content-box a {
-            color: lightblue;
-            text-decoration: none;
-        }
-
         hr {
             border-top: 1px solid lightblue;
         }
@@ -89,7 +77,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container my-5">
         <div class="row">
@@ -97,7 +84,7 @@
                 <img src="img/Me.jpg" alt="Edward Coleman" class="profile-pic mb-3">
                 <h3 class="text-highlight">Edward Coleman</h3>
                 <p class="text-highlight">Student, Statistician and Data Scientist</p>
-                <a href="Coleman_CV.docx" class="btn btn-warning mb-3">One-page CV</a>
+                <a href="Coleman_CV.docx" class="btn btn-warning mb-3">One-Page CV</a>
                 <hr class="bg-gray">
                 <h5 class="text-highlight">Contact</h5>
                 <p class="contact-info">
